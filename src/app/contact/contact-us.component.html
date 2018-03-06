@@ -1,0 +1,47 @@
+<div class="headline-div" style="position: fixed;">
+  <div class="contact-headline">
+    {{formArray.headline}}
+  </div>
+  <div class="contact-headline" style="font-size: 1em;">
+    {{formArray.subline}}
+  </div>
+</div>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div *ngIf="formArray.socialAccount" class="input-div">
+    <input type="text" placeholder="Your social account" formControlName="socialAccount">
+  </div>
+  <div *ngIf="formArray.name" class="input-div">
+    <input type="text" placeholder="Name" formControlName="name">
+  </div>
+  <div *ngIf="formArray.email" class="input-div">
+    <input type="text" placeholder="Email" formControlName="email">
+  </div>
+  <div *ngIf="formArray.message" class="input-div">
+    <textarea placeholder="Message" formControlName="message"></textarea>
+  </div>
+  <div *ngIf="formArray.what" class="input-div">
+    <textarea placeholder="What is your new idea" formControlName="what"></textarea>
+  </div>
+  <div *ngIf="formArray.why" class="input-div">
+    <textarea placeholder="why it is the best idea" formControlName="why"></textarea>
+  </div>
+  <div *ngIf="formArray.linkTitle" class="input-div">
+    <textarea placeholder="Your link title" formControlName="linkTitle"></textarea>
+  </div>
+  <div *ngIf="formArray.linkImage" class="input-div">
+    <input placeholder="Url of the image" formControlName="linkImage">
+  </div>
+  <div *ngIf="formArray.linkDescription" class="input-div">
+    <textarea placeholder="Description of your link" formControlName="linkDescription"></textarea>
+  </div>
+  <div *ngIf="formArray.linkSource" class="input-div">
+    <input placeholder="Link to the source" formControlName="linkSource">
+  </div>
+  <div *ngIf="formArray.linkUrl" class="input-div">
+    <input placeholder="The link" formControlName="linkUrl">
+  </div>
+  <div>
+    <button class="btn contact-btn" type="submit" [disabled]="form.invalid">Submit</button>
+  </div>
+</form>

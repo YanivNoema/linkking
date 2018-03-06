@@ -1,0 +1,15 @@
+.nav {
+    border-bottom: .01em solid #607D8B;
+    padding: .5em 1em;
+    background-color: #fff;
+}
+
+.nav-logo {
+}
+
+.sub-logo-text {
+    color: #607D8B;
+    font-size: 14px;
+    position: relative;
+    top: .2em;
+}

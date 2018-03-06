@@ -1,0 +1,64 @@
+<div class="item-main-title">
+    The Best {{itemName}}
+</div>
+
+<div *ngFor="let item of items | async | reverse">
+    <div class="item-box" style="position: relative;">
+        <div class="item-box-sidebar">
+            <div class="arrow-box arrow-up linking-btn" [ngClass]="{'disabled': checkMaxVotes()}">
+                <img class="arrow" [ngClass]="{'img-disabled': checkMaxVotes()}" (click)="voteUp(item)" src="/assets/icons/up-arrow.png"
+                    width="40">
+            </div>
+            <div class="tool-tip-box-top" *ngIf="checkMaxVotes()">
+                <div class="tool-tip tool-tip-top">
+                    Voting are limited. You can use your vote 3 times every 4 hours
+                    <span class="arrow-right arrow-right-top"></span>
+                </div>
+            </div>
+            <div class="counter-box" [ngClass]="{'counter-box-disabled': checkMaxVotes()}">
+                <div class="counter-container">
+                    <div class="counter">{{item.totalPoints}}</div>
+                    <div class="total-points">TOTAL POINTS</div>
+                </div>
+            </div>
+            <div class="arrow-box arrow-down linking-btn" [ngClass]="{'disabled': checkMaxVotes()}">
+                <img (click)="voteDown(item)" [ngClass]="{'img-disabled': checkMaxVotes()}" class="arrow" src="/assets/icons/down-arrow.png"
+                    width="40">
+            </div>
+            <div class="tool-tip-box-bottom" *ngIf="checkMaxVotes()">
+                <div class="tool-tip tool-tip-bottom">
+                    Voting are limited. You can use your vote 3 times every 4 hours
+                    <span class="arrow-right arrow-right-bottom"></span>
+                </div>
+            </div>
+        </div>
+        <div class="item-box-main">
+            <div class="row">
+                <div class="item-box-text col-6">
+                    <div class="item-title">{{ item.title }}</div>
+                    <div class="width-seprator"></div>
+                    <div class="item-description-source">Description source:
+                        <span class="go-italic">{{item.source}}</span>
+                    </div>
+                    <div class="item-description">{{ item.description | slice:0:TEXT_MAX_LENGTH-3}}...</div>
+                    <div class="width-seprator"></div>
+                    <div class="action-tool-bar">
+                        <div style="margin-top: 15px;">
+                            <div *ngIf="item.social">
+                                <app-social-bar [items]='item.social'></app-social-bar>
+                            </div>
+                        </div>
+                        <div class="item-link-box">
+                            <a [href]=item.link target="_blank" class="a-button">VISIT LINK</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-box-img col-6">
+                    <div class="item-image-wrapper">
+                        <img class="item-image" [src]="item.image" (error)="updateUrl($event, item)"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

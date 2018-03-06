@@ -1,0 +1,87 @@
+.social-side-bar-box {
+    display: block;
+    /* background-color: #F5F5F5; */
+    padding: 1em;
+}
+
+.social-side-bar-item {
+    display: block;
+    margin: 1em 0;
+    display: inline-block;
+}
+
+.social-divider {
+    height: .5em;
+    background-color: #EEEEEE;
+}
+
+.menu-item-wrapper:hover {
+    background-color: #FAFAFA;
+    cursor: pointer;
+}
+
+.menu-item {
+    /* display: inline-block; */
+    font-size: 1em;
+}
+
+.menu-sub-item {
+    font-size: .7em;
+}
+
+.right-menu {
+    float: left;
+    position: relative;
+    top: .7em;
+    left: .2em;
+}
+
+
+.about-first-header {
+    color: #FAFAFA;
+    font-weight: 100;
+    font-size: 2em;
+    background: rgba(0,150,136, .9);
+    padding: .3em;
+    text-align: center;
+}
+
+.about-second-header {
+    color: #FAFAFA;
+    font-weight: 100;
+    font-size: 2em;
+    padding: .3em;
+    margin: 1em;
+    text-align: center;
+}
+
+.about-third-header {
+    color: #FAFAFA;
+    font-weight: 100;
+    font-size: 2em;
+    background: rgba(0,150,136, .9);
+    padding: .3em;
+    text-align: center;
+}
+
+.close-dialog-btn {
+    position: fixed;
+    left: -25vh;
+    background: #FF1744;
+    color: #fff;
+    padding: .5em 1em;
+    border: .02em solid #fff;
+    transition: all ease .3s;
+    box-sizing: border-box;
+    opacity: 1;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+}
+
+.close-dialog-btn:hover {
+    opacity: .8;
+    border: .02em solid #fff;
+    cursor: pointer;
+    box-sizing: border-box;
+}

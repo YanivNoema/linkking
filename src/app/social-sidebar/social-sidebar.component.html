@@ -1,0 +1,83 @@
+<ng-template #search let-c="close" let-d="dismiss">
+    <ngbd-typeahead-basic></ngbd-typeahead-basic>
+    <button type="button" class="btn close-dialog-btn" (click)="c('Close click')">Close</button>
+</ng-template>
+<ng-template #about let-c="close" let-d="dismiss">
+    <!-- <div class="about-first-header">We love programming and we love doing nice things</div>
+    <div class="about-second-header">Front-end developer</div>
+    <div class="about-third-header">We are looking for more great teamates who like to contribute to our project,</div>
+    <div class="dialog-button">
+        <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+    </div> -->
+
+</ng-template>
+
+<ng-template #contact let-c="close" let-d="dismiss">
+    <app-contact-us [formArray]='formArray'></app-contact-us>
+    <button type="button" class="btn close-dialog-btn" (click)="c('Close click')">Close</button>    
+</ng-template>
+
+<ng-template #submit let-c="close" let-d="dismiss">
+    <app-contact-us [formArray]='formArray'></app-contact-us>
+    <button type="button" class="btn close-dialog-btn" (click)="c('Close click')">Close</button>    
+</ng-template>
+
+<ng-template #suggest let-c="close" let-d="dismiss">
+    <app-contact-us [formArray]='formArray'></app-contact-us>
+    <button type="button" class="btn close-dialog-btn" (click)="c('Close click')">Close</button>    
+</ng-template>
+    
+
+<div class="social-side-bar-box">
+    <div class="row menu-item-wrapper">
+        <div class="col-2 left-menu">
+            <img class="social-side-bar-item linking-btn" src="assets/menu/search.png" height="33">
+        </div>
+        <div class="col-10 right-menu" (click)="open(search)">
+            <div class="menu-item">SEARCH</div>
+            <div class="menu-sub-item">FOR YOUR FAVORTIE TOPIC</div>
+        </div>
+    </div>
+    <div class="social-divider"></div>
+    <div class="row menu-item-wrapper">
+        <div class="col-2 left-menu">
+            <img class="social-side-bar-item linking-btn" src="assets/menu/submit.png" height="33">
+        </div>
+        <div class="col-10 right-menu" (click)="open(submit)">
+            <div class="menu-item">SUBMIT</div>
+            <div class="menu-sub-item">YOUR FAVORITE TO THIS TOPIC</div>
+        </div>
+    </div>
+
+    <div class="social-divider"></div>
+
+    <div class="row menu-item-wrapper">
+        <div class="col-2 left-menu">
+            <img class="social-side-bar-item linking-btn" src="assets/menu/about.png" height="33">
+        </div>
+        <div class="col-10 right-menu" (click)="open(about)">
+            <div class="menu-item">ABOUT</div>
+            <div class="menu-sub-item">OUR AWASOME TEAM</div>
+        </div>
+    </div>
+    <div class="social-divider"></div>
+    <div class="row menu-item-wrapper">
+        <div class="col-2 left-menu">
+            <img class="social-side-bar-item linking-btn" src="assets/menu/idea.png" height="33">
+        </div>
+        <div class="col-10 right-menu" (click)="open(suggest)">
+            <div class="menu-item">SUGGEST</div>
+            <div class="menu-sub-item">YOUR GEAT IDEAS FOR NEW TOPICS</div>
+        </div>
+    </div>
+    <div class="social-divider"></div>
+    <div class="row menu-item-wrapper">
+        <div class="col-2 left-menu">
+            <img class="social-side-bar-item linking-btn" src="assets/menu/contact.png" height="33">
+        </div>
+        <div class="col-10 right-menu" (click)="open(contact)">
+            <div class="menu-item">CONTACT</div>
+            <div class="menu-sub-item">US, HOW YOU LIKE</div>
+        </div>
+    </div>
+</div>

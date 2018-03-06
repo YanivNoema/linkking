@@ -1,0 +1,11 @@
+<input
+  id="typeahead-focus"
+  type="text"
+  class="search-bar"
+  [(ngModel)]="model"
+  [ngbTypeahead]="search"
+  (focus)="focus$.next($event.target.value)"
+  (click)="click$.next($event.target.value)"
+  #instance="ngbTypeahead"
+  placeholder="Who is the best..."
+/>

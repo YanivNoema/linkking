@@ -1,0 +1,19 @@
+.side-bar-item {
+    padding: .7em;
+    margin: .1em;
+    /* border: 1px solid #607D8B; */
+    background-color: #ECEFF1;
+    color: #607D8B;
+    font-size: 16px;
+}
+
+.side-bar-title {
+    color: #0091EA;
+    font-size: 20px;
+    font-weight: 600;
+    margin: .1em;    
+}
+
+a{
+    text-decoration: none;
+}

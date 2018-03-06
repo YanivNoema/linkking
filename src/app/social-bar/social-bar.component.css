@@ -1,0 +1,32 @@
+
+.social-bar-main {
+    display: flex;
+}
+
+svg {
+    fill: #92a5af;
+    width: 20px;
+    height: 20px;
+}
+
+.social-icon {
+    padding: .4em;
+    display: inline-block;
+    text-align: center;
+    transition: fill ease .3s;
+}
+
+.social-icon:hover {
+    cursor: pointer;
+}
+
+.facebook:hover .social-icon svg {
+    fill: #3B5998;
+}
+
+.height-separtor {
+    width: 1px;
+    height: 24px;
+    background-color: #CFD8DC;
+    display: inline-block;
+}
