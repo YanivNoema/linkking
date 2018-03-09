@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./contact-us.component.css']
 })
 export class ContactUsComponent {
-  @Input() formArray: {};
+  @Input() formArray: any;
   form: FormGroup;
   formTypes = {
     contact: {

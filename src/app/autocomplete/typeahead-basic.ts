@@ -8,7 +8,7 @@ declare var $: any;
 
 @Component({
   selector: 'ngbd-typeahead-basic',
-  templateUrl: '/typeahead-basic.html',
+  templateUrl: './typeahead-basic.html',
   styles: [`.form-control { width: 300px; }`]
 })
 export class NgbdTypeaheadBasic {

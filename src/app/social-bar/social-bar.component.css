@@ -1,19 +1,40 @@
 
 .social-bar-main {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 0.1em 0;
+    border: 1px solid #eee;
+}
+
+
+.height-separtor {
+    width: .5px;
+    height: 15px;
+    background-color: #CFD8DC;
+    display: inline-block;
+}
+
+.social-wrapper {
+    display: inline-block;
 }
 
 svg {
     fill: #92a5af;
-    width: 20px;
-    height: 20px;
+    width: 1em;
+    height: 1em;
+    /* position: absolute; */
 }
 
 .social-icon {
-    padding: .4em;
+    padding: .4em .4em 0 .4em;
     display: inline-block;
     text-align: center;
     transition: fill ease .3s;
+    display: inline-block;
 }
 
 .social-icon:hover {
@@ -24,9 +45,22 @@ svg {
     fill: #3B5998;
 }
 
-.height-separtor {
-    width: 1px;
-    height: 24px;
-    background-color: #CFD8DC;
-    display: inline-block;
+.google:hover .social-icon svg {
+    fill: #d34836;
+}
+
+.twitter:hover .social-icon svg {
+    fill: #1DA1F2;
+}
+
+.tumblr:hover .social-icon svg {
+    fill: #2B4964;
+}
+
+.pinterest:hover .social-icon svg {
+    fill: #bd081c;
+}
+
+.linkedin:hover .social-icon svg {
+    fill: #4875B4;
 }
