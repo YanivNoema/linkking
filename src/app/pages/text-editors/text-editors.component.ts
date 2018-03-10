@@ -12,11 +12,8 @@ import { RatingService } from '../../services/rating-service.component';
 export class TextEditorsComponent {
   newText: string;
   itemName = 'text-editors';
+  itemNameTitle: string;
   cookieValue: string;
-  maxVotes = 3;
-  cookieExpire = 0.1;
-  cookieExpireInMintus = 240;
-  counter = 0;
 
   TEXT_MAX_LENGTH = 128;
   items: Observable<any[]>;
@@ -24,8 +21,27 @@ export class TextEditorsComponent {
   constructor(private cookieService: CookieService,
     private db: AngularFirestore,
     private ratingService: RatingService) {
-    this.counter = 0;
     this.items = this.db.collection('/' + this.itemName, ref => ref.orderBy('totalPoints')).valueChanges();
+    this.itemNameTitle = this.getTitleFromKebabCase(this.itemName);
+  }
+
+  getTitleFromKebabCase(str): string {
+    let ret = '';
+    let flag = true;
+    for (const char of str) {
+        if (flag) {
+          flag = false;
+          ret += char.toUpperCase();
+          continue;
+        }
+        if (char === '-') {
+          flag = true;
+          ret += ' ';
+        } else {
+          ret += char;
+        }
+    }
+    return ret;
   }
 
   sliceText(text) {

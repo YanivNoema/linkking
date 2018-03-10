@@ -6,7 +6,7 @@ import { CookieService } from 'ngx-cookie-service';
 @Injectable()
 export class RatingService {
     cookieValue: string;
-    maxVotes = 10;
+    maxVotes = 3;
     cookieExpire = 0.1;
     cookieExpireInMintus = 240;
     counter = 0;
