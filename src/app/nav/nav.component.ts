@@ -1,4 +1,5 @@
 import { Component, Inject } from '@angular/core';
+import { RatingService } from '../services/rating-service.component';
 
 @Component({
   selector: 'nav',
@@ -6,5 +7,8 @@ import { Component, Inject } from '@angular/core';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent {
+
+  constructor(private ratingService: RatingService) {
+  }
 
 }

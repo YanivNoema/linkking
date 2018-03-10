@@ -2,9 +2,14 @@
     border-bottom: .01em solid #607D8B;
     padding: .5em 1em;
     background-color: #fff;
+    /* display: flex; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .nav-logo {
+    /* width: 25%; */
 }
 
 .sub-logo-text {
@@ -12,4 +17,37 @@
     font-size: 14px;
     position: relative;
     top: .2em;
+}
+
+.nav-rating-wrapper {
+    border-radius: 2px;
+    background-color: #C51162;
+    padding: .4em;
+}
+
+.nav-rating {
+    text-align: center;
+}
+
+.rating-text {
+    color: #fafafa;
+    font-size: 1.2em;
+    font-weight: 100;
+    padding: .1em .5em;
+}
+
+.rating-text-number {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: #fafafa;
+}
+
+.nav-rating-center {
+    display: inline-block;
+}
+.nav-rating-left {
+    display: inline-block;
+}
+.nav-rating-right {
+    display: inline-block;    
 }

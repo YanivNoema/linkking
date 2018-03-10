@@ -35,6 +35,8 @@ import { SoicalBarComponent } from './social-bar/social-bar.component';
 import { SlicePipe } from '@angular/common';
 import { NgPipesModule } from 'ngx-pipes';
 
+/*service*/
+import { RatingService } from './services/rating-service.component';
 /* dialogs*/
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbdTypeaheadBasic } from './autocomplete/typeahead-basic';
@@ -76,7 +78,7 @@ import { NgbdTypeaheadBasic } from './autocomplete/typeahead-basic';
       { path: 'the-best-cheesecake-recipes', component: CheesecakeRecipesComponent },
     ]),
     ],
-    providers: [SlicePipe, CookieService],
+    providers: [SlicePipe, CookieService, RatingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

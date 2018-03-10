@@ -1,10 +1,19 @@
 <div class="nav container-fluid">
-    <div class="row">
-        <div class="col-12 nav-logo">
-            <img src="assets/logo/linking-logo-nav.png" height="37">
-            <!-- <img src="assets/logo/linking-logo-4.png" height="37"> -->
-            <span class="sub-logo-text">WHO IS GOING TO BE THE BEST?</span>
-            <!-- <span class="sub-logo-text">VOTE, SUBMIT AND SUGGEST FOR THE NEXT KING</span> -->
+    <div class="nav-logo">
+        <img src="assets/logo/linking-logo-nav.png" height="37">
+        <span class="sub-logo-text">WHO IS GOING TO BE THE BEST?</span>
+    </div>
+    <div class="nav-rating-wrapper">
+        <div class="nav-rating">
+            <div class="nav-rating-left">
+                <span class="rating-text">You've got</span>
+                <span class="rating-text-number">{{ratingService.counter}}</span>
+            </div>
+            <div class="nav-rating-center rating-text-number">/</div>
+            <div class="nav-rating-right">
+                <span class="rating-text-number">{{ratingService.maxVotes}}</span>
+                <span class="rating-text">remaining votes</span>
+            </div>
         </div>
     </div>
 </div>
