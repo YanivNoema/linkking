@@ -3,6 +3,7 @@ import { AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firesto
 import { Observable } from 'rxjs/Observable';
 import { CookieService } from 'ngx-cookie-service';
 import { RatingService } from '../../services/rating-service.component';
+import { HelperService } from '../../services/helper-service.component';
 
 @Component({
   selector: 'app-text-editors',
@@ -20,28 +21,10 @@ export class TextEditorsComponent {
 
   constructor(private cookieService: CookieService,
     private db: AngularFirestore,
-    private ratingService: RatingService) {
+    private ratingService: RatingService,
+    private helperService: HelperService) {
     this.items = this.db.collection('/' + this.itemName, ref => ref.orderBy('totalPoints')).valueChanges();
-    this.itemNameTitle = this.getTitleFromKebabCase(this.itemName);
-  }
-
-  getTitleFromKebabCase(str): string {
-    let ret = '';
-    let flag = true;
-    for (const char of str) {
-        if (flag) {
-          flag = false;
-          ret += char.toUpperCase();
-          continue;
-        }
-        if (char === '-') {
-          flag = true;
-          ret += ' ';
-        } else {
-          ret += char;
-        }
-    }
-    return ret;
+    this.itemNameTitle = this.helperService.getTitleFromKebabCase(this.itemName);
   }
 
   sliceText(text) {

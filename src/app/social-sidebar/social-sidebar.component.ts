@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogModule } from '@angular/material/dialog';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { Observable } from 'rxjs/Observable';
@@ -20,13 +20,12 @@ const states = ['Alabama', 'Alaska', 'American Samoa', 'Arizona', 'Arkansas', 'C
   templateUrl: './social-sidebar.component.html',
   styleUrls: ['./social-sidebar.component.css']
 })
-export class SoicalSidebarComponent {
+export class SoicalSidebarComponent implements OnInit {
 
   public model: any;
   formArray: any;
 
   constructor(private modalService: NgbModal) {
-    this.initFormArray();
   }
 
   search = (text$: Observable<string>) =>
@@ -54,30 +53,34 @@ export class SoicalSidebarComponent {
     }
   }
 
-  initFormArray() {
-    //   this.formArray = {
-    //     headline: ' headline',
-    //     name: ' name',
-    //     email: 'email',
-    //     message: 'message'
-    // };
-
-    this.formArray = {
-      headline: 'The Best of *** your idea',
-      subline: 'we promise all the crdits goes to you, so please leave us link to your one of the social account',
-      why: 'why',
-      what: 'what',
-      socialAccount: 'socialAccount'
-    };
-
-    this.formArray = {
-      headline: 'The Best of *** your idea',
-      subline: 'we promise all the crdits goes to you, so please leave us link to your one of the social account',
-      linkTitle: 'linkTitle',
-      linkImage: 'linkImage',
-      linkDescription: 'linkDescription',
-      linkSource: 'linkSource',
-      linkUrl: 'linkUrl',
-    };
+  initFormArray(type) {
+    if (type === 'contact') {
+      this.formArray = {
+          headline: ' headline',
+          name: ' name',
+          email: 'email',
+          message: 'message',
+          type: 'contactUs'
+      };
+    } else if (type === 'contact') {
+      this.formArray = {
+        headline: 'The Best of *** your idea',
+        subline: 'we promise all the crdits goes to you, so please leave us link to your one of the social account',
+        why: 'why',
+        what: 'what',
+        socialAccount: 'socialAccount'
+      };
+    } else if (type === 'submit') {
+      this.formArray = {
+        headline: 'The Best of *** your idea',
+        subline: 'we promise all the crdits goes to you, so please leave us link to your one of the social account',
+        linkTitle: 'linkTitle',
+        linkImage: 'linkImage',
+        linkDescription: 'linkDescription',
+        linkSource: 'linkSource',
+        linkUrl: 'linkUrl',
+        type: 'submit'
+      };
+    }
   }
 }

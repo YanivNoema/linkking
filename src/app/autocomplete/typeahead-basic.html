@@ -6,8 +6,14 @@
   [ngbTypeahead]="search"
   #instance="ngbTypeahead"
   placeholder="Who is the best..."
-/>
+  (selectItem)="selectedItem($event)"
+  />
 
-<!-- (focus)="focus$.next($event.target.value)"
-(click)="click$.next($event.target.value)" -->
+<!--   
+  (focus)="itemClick($event.target.value)" 
+  (click)="itemClick($event.target.value)"
+  (mousedown)="itemClick($event.target.value)"
+  (mouseup)="itemClick($event.target.value)"
+  (keyup)="onKeyUp($event)"
+  (onSelect)="itemClick($event.target.value)" -->
   

@@ -8,7 +8,7 @@ import { RatingService } from '../services/rating-service.component';
 })
 export class NavComponent {
 
-  constructor(private ratingService: RatingService) {
+  constructor(public ratingService: RatingService) {
   }
 
 }

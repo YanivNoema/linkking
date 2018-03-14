@@ -12,10 +12,10 @@
 
 </ng-template>
 
-<ng-template #contact let-c="close" let-d="dismiss">
-    <app-contact-us [formArray]='formArray'></app-contact-us>
-    <button type="button" class="btn close-dialog-btn" (click)="c('Close click')">Close</button>    
-</ng-template>
+    <ng-template #contact let-c="close" let-d="dismiss" >
+        <app-contact-us [formArray]='formArray'></app-contact-us>
+        <button type="button" class="btn close-dialog-btn" (click)="c('Close click')">Close</button>    
+    </ng-template>
 
 <ng-template #submit let-c="close" let-d="dismiss">
     <app-contact-us [formArray]='formArray'></app-contact-us>
@@ -43,7 +43,7 @@
         <div class="col-2 left-menu">
             <img class="social-side-bar-item linking-btn" src="assets/menu/submit.png" height="33">
         </div>
-        <div class="col-10 right-menu" (click)="open(submit)">
+        <div class="col-10 right-menu" (click)="initFormArray('submit')" (click)="open(submit)">
             <div class="menu-item">SUBMIT</div>
             <div class="menu-sub-item">YOUR FAVORITE TO THIS TOPIC</div>
         </div>
@@ -61,21 +61,21 @@
         </div>
     </div>
     <div class="social-divider"></div>
-    <div class="row menu-item-wrapper">
+    <!-- <div class="row menu-item-wrapper">
         <div class="col-2 left-menu">
             <img class="social-side-bar-item linking-btn" src="assets/menu/idea.png" height="33">
         </div>
-        <div class="col-10 right-menu" (click)="open(suggest)">
+        <div class="col-10 right-menu" (click)="initFormArray('suggest')" (click)="open(suggest)">
             <div class="menu-item">SUGGEST</div>
             <div class="menu-sub-item">YOUR GEAT IDEAS FOR NEW TOPICS</div>
         </div>
-    </div>
+    </div> -->
     <div class="social-divider"></div>
     <div class="row menu-item-wrapper">
         <div class="col-2 left-menu">
             <img class="social-side-bar-item linking-btn" src="assets/menu/contact.png" height="33">
         </div>
-        <div class="col-10 right-menu" (click)="open(contact)">
+        <div class="col-10 right-menu" (click)="initFormArray('contact')" (click)="open(contact)" >
             <div class="menu-item">CONTACT</div>
             <div class="menu-sub-item">US, HOW YOU LIKE</div>
         </div>

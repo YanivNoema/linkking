@@ -1,7 +1,9 @@
 
 * {
-    font-family: 'Josefin Sans', sans-serif;
+    /* font-family: 'Josefin Sans', sans-serif; */
     /* color: #607D8B; */
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Exo', sans-serif;
 }
 
 a:link, a:visited {

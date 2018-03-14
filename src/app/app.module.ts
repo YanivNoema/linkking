@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
@@ -15,11 +16,11 @@ import { ContactUsComponent } from './contact/contact-us.component';
 
 
 import { TextEditorsComponent } from './pages/text-editors/text-editors.component';
-import { NationalParksComponent } from './pages/text-editors/national-parks.component';
-import { IceCreamRecipesComponent } from './pages/text-editors/ice-cream-cake.component';
-import { WebBrowsersComponent } from './pages/text-editors/web-browsers.component';
-import { ChickenMarinadeRecipesComponent } from './pages/text-editors/chicken-marinade-recipes.component';
-import { CheesecakeRecipesComponent } from './pages/text-editors/cheesecake-recipes.component';
+// import { NationalParksComponent } from './pages/text-editors/national-parks.component';
+// import { IceCreamRecipesComponent } from './pages/text-editors/ice-cream-cake.component';
+// import { WebBrowsersComponent } from './pages/text-editors/web-browsers.component';
+// import { ChickenMarinadeRecipesComponent } from './pages/text-editors/chicken-marinade-recipes.component';
+// import { CheesecakeRecipesComponent } from './pages/text-editors/cheesecake-recipes.component';
 
 
 import { TransferHttpCacheModule } from '@nguniversal/common';
@@ -31,12 +32,14 @@ import { CookieService } from 'ngx-cookie-service';
 
 import { SoicalBarComponent } from './social-bar/social-bar.component';
 
-/* pipes*/
+/*pipes*/
 import { SlicePipe } from '@angular/common';
 import { NgPipesModule } from 'ngx-pipes';
-
 /*service*/
 import { RatingService } from './services/rating-service.component';
+import { HelperService } from './services/helper-service.component';
+import { SendApiService } from './services/send-api-service.component';
+import { FireBaseService } from './services/firebase-service.component';
 /* dialogs*/
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbdTypeaheadBasic } from './autocomplete/typeahead-basic';
@@ -47,16 +50,16 @@ import { NgbdTypeaheadBasic } from './autocomplete/typeahead-basic';
     HomeComponent,
     SidebarComponent,
     TextEditorsComponent,
-    NationalParksComponent,
-    IceCreamRecipesComponent,
+    // NationalParksComponent,
+    // IceCreamRecipesComponent,
     NavComponent,
     SoicalSidebarComponent,
     NgbdTypeaheadBasic,
     SoicalBarComponent,
     ContactUsComponent,
-    WebBrowsersComponent,
-    ChickenMarinadeRecipesComponent,
-    CheesecakeRecipesComponent
+    // WebBrowsersComponent,
+    // ChickenMarinadeRecipesComponent,
+    // CheesecakeRecipesComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
@@ -68,17 +71,25 @@ import { NgbdTypeaheadBasic } from './autocomplete/typeahead-basic';
     BootstrapModalModule,
     ReactiveFormsModule,
     NgbModule.forRoot(),
+    HttpClientModule,
     RouterModule.forRoot([
       { path: '', component: TextEditorsComponent, pathMatch: 'full'},
       { path: 'the-best-text-editors', component: TextEditorsComponent },
-      { path: 'the-best-national-parks-in-america', component: NationalParksComponent },
-      { path: 'the-best-ice-cream-cake-recipes', component: IceCreamRecipesComponent },
-      { path: 'the-best-web-browsers', component: WebBrowsersComponent },
-      { path: 'the-best-chicken-marinade-recipes', component: ChickenMarinadeRecipesComponent },
-      { path: 'the-best-cheesecake-recipes', component: CheesecakeRecipesComponent },
+      // { path: 'the-best-national-parks-in-america', component: NationalParksComponent },
+      // { path: 'the-best-ice-cream-cake-recipes', component: IceCreamRecipesComponent },
+      // { path: 'the-best-web-browsers', component: WebBrowsersComponent },
+      // { path: 'the-best-chicken-marinade-recipes', component: ChickenMarinadeRecipesComponent },
+      // { path: 'the-best-cheesecake-recipes', component: CheesecakeRecipesComponent },
     ]),
     ],
-    providers: [SlicePipe, CookieService, RatingService],
+    providers: [
+      SlicePipe,
+      CookieService,
+      RatingService,
+      HelperService,
+      SendApiService,
+      FireBaseService
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
