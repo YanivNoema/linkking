@@ -1,9 +1,7 @@
 
 * {
-    /* font-family: 'Josefin Sans', sans-serif; */
-    /* color: #607D8B; */
-    font-family: 'Raleway', sans-serif;
-    font-family: 'Exo', sans-serif;
+    font-family: 'Assistant', sans-serif;
+    /* line-height: 20px; */
 }
 
 a:link, a:visited {
@@ -30,7 +28,7 @@ a:active {
 }
 
 .empty-divider {
-    height: 4em;
+    height: 3.3em;
     background-color: #fff;
 }
 
@@ -93,19 +91,57 @@ a:active {
   
 
   .search-bar {
-      font-size: 3em;
+      font-size: 1.2em;
       border: none;
-      border-bottom: .1em solid #CFD8DC;
+      border: .04em solid #90A4AE;
       color: #CFD8DC;
-      background: none;
-      font-family: 'Josefin Sans', sans-serif;
-
+      background: #FAFAFA;
+      width: 100%;
+      font-family: 'Assistant', sans-serif;
+      box-sizing: border-box;
+      border-right: none;
+      padding-left: .3em;
     }
 
-  input, ::placeholder {
-      color: #CFD8DC !important;
+    .search-bar-left-box {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .search-bar-right-box {
+        display: inline-block;
+        width: 60px;
+        background-color: #F5F5F5;
+        text-align: center;
+        box-sizing: border-box;
+        padding: .12em;
+        border: .05em solid #90A4AE;
+        transition: background-color .6s ease;
+    }
+
+    /* .search-bar-right-box:hover {
+        cursor: pointer;
+        background-color: #E0E0E0;
+    } */
+
+    .search-bar-right-box svg {
+        fill: #90A4AE;
+        width: 20px;
+        top: 5px;
+    }
+
+    .search-bar-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 3px;
+    }
+    
+    input, ::placeholder {
+      color: #90A4AE !important;
       font-weight: 2.6;
-      font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Assistant', sans-serif;
     }
 
   textarea:focus, input:focus{
@@ -121,19 +157,21 @@ a:active {
 
 .dropdown-menu {
     /* display: none !important; */
-    background-color: transparent !important;
+    background-color: #EEEEEE !important;
     width: 100%;
+    
 }
 
 .dropdown-item {
-    color: #FAFAFA;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 500;
-    font-size: 28px;
+    color: #0277BD;
+    font-weight: 400;
+    font-size: 1em;
 }
 
+.dropdown-item:hover {
+    cursor: pointer;
+}
 .dropdown-item.active, .dropdown-item:active {
-    background-color: #FAFAFA;
-    border-radius: 15px;
-    color: rgba(128, 128, 128, 1);
+    background-color: #0277BD;
+    color: #FAFAFA;
 }

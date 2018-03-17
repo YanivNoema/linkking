@@ -15,14 +15,20 @@
     background-color: #EEEEEE;
 }
 
+.menu-item-wrapper {
+    padding: .5em;
+    border-bottom: .1em solid #eee;
+    line-height: 16px;
+}
+
 .menu-item-wrapper:hover {
     background-color: #FAFAFA;
     cursor: pointer;
 }
 
 .menu-item {
-    /* display: inline-block; */
     font-size: 1em;
+    font-weight: 500;
 }
 
 .menu-sub-item {
@@ -30,10 +36,10 @@
 }
 
 .right-menu {
-    float: left;
+    /* float: left;
     position: relative;
     top: .7em;
-    left: .2em;
+    left: .2em; */
 }
 
 
@@ -74,7 +80,7 @@
     transition: all ease .3s;
     box-sizing: border-box;
     opacity: 1;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Assistant', sans-serif;
     font-weight: 300;
     font-size: 1em;
 }
@@ -84,4 +90,89 @@
     border: .02em solid #fff;
     cursor: pointer;
     box-sizing: border-box;
+}
+
+.menu-item-svg {
+}
+.menu-item-svg svg {
+    width: 27px;
+    height: 27px;
+    fill: #01579B;
+}
+
+.nav-rating-wrapper {
+    border-radius: 2px;
+    background-color: #01579B;
+    padding: 1em 0 2em 0;
+}
+
+.nav-rating-wrapper-disabled {
+    border-radius: 2px;
+    background-color: #01579B;
+    padding: 1em 0 2em 0;
+    opacity: .6;
+}
+
+.nav-rating {
+    text-align: left;
+    padding-left: 30px;
+}
+
+.rating-text {
+    color: #fafafa;
+    font-size: 1.2em;
+    font-weight: 700;
+    /* padding: .1em .5em; */
+}
+
+.rating-text-number {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #fafafa;
+}
+
+.nav-rating-center {
+    display: inline-block;
+}
+.nav-rating-left {
+    display: inline-block;
+}
+.nav-rating-right {
+    display: inline-block;    
+}
+
+.rating-icon {
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    width: 23px;
+    left: 5px;
+}
+
+.rating-icon svg {
+    fill: #fafafa;
+}
+
+.voice-help {
+    left: 30px;
+    position: absolute;
+    font-size: .7em;
+    color: #eee;
+    text-align: center;
+    border-bottom: .05em dotted #fff;
+    opacity: .6;
+    transition: .6s ease all;
+}
+
+.voice-help:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.menu-item-main {
+    background-color: #01579B;
+    color: #fafafa;
+    font-weight: 700;
+    padding: .3em;
+    margin-top: 1em;
 }

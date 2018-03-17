@@ -1,11 +1,11 @@
 
 .item-main-title {
-    font-size: 52px;
+    font-size: 30px;
     font-weight: 200;
     color: #607D8B;
     background-color: #FAFAFA;
     padding: .3em;
-    border: .02em solid #fff;
+    border: .02em solid #eee;
 }
 
 .item-box{
@@ -19,7 +19,7 @@
 .item-box-sidebar {
     background-color: #FAFAFA;
     width: 15%;
-    height: 292px;
+    height: 250px;
     margin: 0 .5em;
 }
 
@@ -129,12 +129,12 @@
 
 .item-image {
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border: 2px solid #eee;
     box-shadow: 0px 0px 3px #263238;
-    max-width: 80%;
+    max-width: 200px;
     max-height: 100%;
     transition: all ease .3s;
     opacity: .9;

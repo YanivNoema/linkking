@@ -1,0 +1,6 @@
+.left-side-bar-menu {
+    position: fixed;
+    background-color: #F5F5F5;
+    height: 100vh;
+    border-right: .1em solid #eee;
+}

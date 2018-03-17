@@ -16,7 +16,7 @@ export class TextEditorsComponent {
   itemNameTitle: string;
   cookieValue: string;
 
-  TEXT_MAX_LENGTH = 128;
+  TEXT_MAX_LENGTH = 156;
   items: Observable<any[]>;
 
   constructor(private cookieService: CookieService,
