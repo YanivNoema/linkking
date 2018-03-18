@@ -104,9 +104,15 @@
     border-radius: 2px;
     background-color: #01579B;
     padding: 1em 0 2em 0;
+    border-right: .1em solid #eee;
+    /* transition: 5s all ease; */
+}
+
+.nav-rating-wrapper:hover {
 }
 
 .nav-rating-wrapper-disabled {
+    border-right: .1em solid #01579B;
     border-radius: 2px;
     background-color: #01579B;
     padding: 1em 0 2em 0;

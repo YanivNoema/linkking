@@ -140,8 +140,14 @@ a:active {
     
     input, ::placeholder {
       color: #90A4AE !important;
-      font-weight: 2.6;
+      font-weight: 500;
+      font-size: 1em;
       font-family: 'Assistant', sans-serif;
+    }
+
+    input:focus {
+        border: .05em solid #0091EA;
+        border-right: none;
     }
 
   textarea:focus, input:focus{

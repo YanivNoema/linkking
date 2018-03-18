@@ -18,7 +18,7 @@ export class ContactUsComponent implements OnInit {
   formTypes = {
     contactUs: {
       name: ['', Validators.required],
-      email: ['', Validators.required],
+      email: ['', Validators.required, Validators.email],
       message: ['', Validators.required],
     },
     submit: {
@@ -49,6 +49,7 @@ export class ContactUsComponent implements OnInit {
   createForm(formArray) {
     const type = formArray.type;
     this.form = this.fb.group(this.formTypes[type]);
+    // debugger;
   }
   async onSubmit() {
     let formRequest: any;

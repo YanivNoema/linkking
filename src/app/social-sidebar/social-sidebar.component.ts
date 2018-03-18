@@ -44,7 +44,8 @@ export class SoicalSidebarComponent {
   initFormArray(type) {
     if (type === 'contact') {
       this.formArray = {
-          headline: ' headline',
+          headline: 'We\'ll be :) to hear from you ',
+          subline: 'Contact us here or via one of our social account',
           name: ' name',
           email: 'email',
           message: 'message',

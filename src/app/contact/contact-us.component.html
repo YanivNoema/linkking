@@ -14,11 +14,29 @@
   <div *ngIf="formArray.name" class="input-div">
     <input type="text" placeholder="Name" formControlName="name">
   </div>
+  <div *ngIf="formArray.name && form.controls.name.invalid && (form.controls.name.dirty || form.controls.name.touched)" class="contact-error">
+    <div *ngIf="form.controls.name.errors.required">
+      Name is required
+    </div>
+  </div>
   <div *ngIf="formArray.email" class="input-div">
     <input type="text" placeholder="Email" formControlName="email">
   </div>
+  <div *ngIf="formArray.email && form.controls.email.invalid && (form.controls.email.dirty || form.controls.email.touched)" class="contact-error">
+    <div *ngIf="form.controls.email.errors.required">
+      Email is required
+    </div>
+    <div *ngIf="form.controls.email.errors.email">
+      Email is not valid
+    </div>
+  </div>
   <div *ngIf="formArray.message" class="input-div">
     <textarea placeholder="Message" formControlName="message"></textarea>
+  </div>
+  <div *ngIf="formArray.message && form.controls.message.invalid && (form.controls.message.dirty || form.controls.message.touched)" class="contact-error">
+    <div *ngIf="form.controls.message.errors.required">
+      Message is required
+    </div>
   </div>
   <div *ngIf="formArray.what" class="input-div">
     <textarea placeholder="What is your new idea" formControlName="what"></textarea>

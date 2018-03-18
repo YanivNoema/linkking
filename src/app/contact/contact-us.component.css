@@ -40,3 +40,10 @@ textarea, input {
     color: #fff;
 }
 
+.contact-error {
+    color: #FF5252;
+    margin-left: 1em;
+    display: inline-block;
+    font-weight: 500 !important;
+    font-size: 14px;
+}
