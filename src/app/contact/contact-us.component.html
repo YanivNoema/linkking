@@ -18,6 +18,9 @@
     <div *ngIf="form.controls.name.errors.required">
       Name is required
     </div>
+    <div *ngIf="form.controls.name.errors.minlength">
+      Name must be at least 2 characters long.
+    </div>
   </div>
   <div *ngIf="formArray.email" class="input-div">
     <input type="text" placeholder="Email" formControlName="email">
@@ -41,24 +44,60 @@
   <div *ngIf="formArray.what" class="input-div">
     <textarea placeholder="What is your new idea" formControlName="what"></textarea>
   </div>
+  
   <div *ngIf="formArray.why" class="input-div">
     <textarea placeholder="why it is the best idea" formControlName="why"></textarea>
   </div>
+  
   <div *ngIf="formArray.linkTitle" class="input-div">
     <textarea placeholder="Your link title" formControlName="linkTitle"></textarea>
   </div>
+  <div *ngIf="formArray.linkTitle && form.controls.linkTitle.invalid && (form.controls.linkTitle.dirty || form.controls.linkTitle.touched)" class="contact-error">
+    <div *ngIf="form.controls.linkTitle.errors.required">
+      Link title is required
+    </div>
+  </div>
+  
   <div *ngIf="formArray.linkImage" class="input-div">
     <input placeholder="Url of the image" formControlName="linkImage">
   </div>
+
+  <div *ngIf="formArray.linkImage && form.controls.linkImage.invalid && (form.controls.linkImage.dirty || form.controls.linkImage.touched)" class="contact-error">
+    <div *ngIf="form.controls.linkImage.errors.required">
+      Link Image is required
+    </div>
+  </div>
+
   <div *ngIf="formArray.linkDescription" class="input-div">
     <textarea placeholder="Description of your link" formControlName="linkDescription"></textarea>
   </div>
+
+  <div *ngIf="formArray.linkDescription && form.controls.linkDescription.invalid && (form.controls.linkDescription.dirty || form.controls.linkDescription.touched)" class="contact-error">
+    <div *ngIf="form.controls.linkDescription.errors.required">
+      Link Description is required
+    </div>
+  </div>
+
   <div *ngIf="formArray.linkSource" class="input-div">
     <input placeholder="Link to the source" formControlName="linkSource">
   </div>
+
+  <div *ngIf="formArray.linkSource && form.controls.linkSource.invalid && (form.controls.linkSource.dirty || form.controls.linkSource.touched)" class="contact-error">
+    <div *ngIf="form.controls.linkSource.errors.required">
+      Link Source is required
+    </div>
+  </div>
+
   <div *ngIf="formArray.linkUrl" class="input-div">
     <input placeholder="The link" formControlName="linkUrl">
   </div>
+
+  <div *ngIf="formArray.linkUrl && form.controls.linkUrl.invalid && (form.controls.linkUrl.dirty || form.controls.linkUrl.touched)" class="contact-error">
+    <div *ngIf="form.controls.linkUrl.errors.required">
+      Link URL is required
+    </div>
+  </div>
+
   <div>
     <button class="btn contact-btn" type="submit" [disabled]="form.invalid">Submit</button>
   </div>

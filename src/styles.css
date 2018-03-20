@@ -139,8 +139,8 @@ a:active {
     }
     
     input, ::placeholder {
-      color: #90A4AE !important;
-      font-weight: 500;
+      color: #fff !important;
+      font-weight: 100;
       font-size: 1em;
       font-family: 'Assistant', sans-serif;
     }

@@ -17,8 +17,8 @@ export class ContactUsComponent implements OnInit {
   form: FormGroup;
   formTypes = {
     contactUs: {
-      name: ['', Validators.required],
-      email: ['', Validators.required, Validators.email],
+      name: ['', [Validators.required, Validators.minLength(2)]],
+      email: ['', [Validators.required, Validators.email]],
       message: ['', Validators.required],
     },
     submit: {
@@ -93,6 +93,7 @@ export class ContactUsComponent implements OnInit {
       console.log('Error: ', err.message);
     }
   }
+
   useSubmit(formRequest) {
     this.fireBaseService.addItem(formRequest, this.router.url );
   }

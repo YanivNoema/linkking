@@ -44,6 +44,6 @@ textarea, input {
     color: #FF5252;
     margin-left: 1em;
     display: inline-block;
-    font-weight: 500 !important;
+    font-weight: 300 !important;
     font-size: 14px;
 }
