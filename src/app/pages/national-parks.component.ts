@@ -2,17 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 import { CookieService } from 'ngx-cookie-service';
-import { RatingService } from '../../services/rating-service.component';
-import { HelperService } from '../../services/helper-service.component';
+import { RatingService } from '../services/rating-service.component';
+import { HelperService } from '../services/helper-service.component';
 
 @Component({
-  selector: 'app-text-editors',
-  templateUrl: '../../general-codes/html/text-editors.component.html',
-  styleUrls: ['../../general-codes/css/text-editors.component.css']
+  selector: 'app-national-parks-in-america',
+  templateUrl: '../general-codes/html/text-editors.component.html',
+  styleUrls: ['../general-codes/css/text-editors.component.css']
 })
-export class TextEditorsComponent {
+export class NationalParksComponent {
   newText: string;
-  itemName = 'text-editors';
+  itemName = 'nationa-park-in-america';
   itemNameTitle: string;
   cookieValue: string;
 

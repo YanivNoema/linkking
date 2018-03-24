@@ -4,3 +4,13 @@
     height: 100vh;
     border-right: .1em solid #eee;
 }
+
+.sidebar-wrapper {
+    position: fixed;
+    padding: .5em;
+    max-height: 80vh;
+    overflow: scroll;
+    background: #eee;
+    overflow-x: hidden;
+    text-align: center;
+}

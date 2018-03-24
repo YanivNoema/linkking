@@ -1,5 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { RatingService } from '../services/rating-service.component';
+import { ManagerService } from '../services/manager-service.component';
 
 @Component({
   selector: 'nav',
@@ -8,7 +9,7 @@ import { RatingService } from '../services/rating-service.component';
 })
 export class NavComponent {
 
-  constructor(public ratingService: RatingService) {
+  constructor(public ratingService: RatingService, public managerService: ManagerService) {
   }
 
 }
