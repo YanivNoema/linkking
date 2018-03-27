@@ -217,4 +217,18 @@ a:active {
         display: none;
     }
 
+    .flex-dir {
+        flex-direction: column;
+    }
 }
+
+@media (min-width: 1025px) { /* big landscape tablets, laptops, and desktops */ 
+    .not-display-on-min-1025px {
+        display: none !important;
+    }
+
+    .flex-dir {
+        flex-direction: row;
+    }
+}
+
