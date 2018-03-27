@@ -2,6 +2,7 @@
   <div class="search-bar-left-box">
 
       <input
+      #input
       id="typeahead-focus"
       type="text"
       class="search-bar"
@@ -11,7 +12,7 @@
       (click)="click$.next($event.target.value)"
       #instance="ngbTypeahead"
       placeholder="Search" 
-      (selectItem)="selectedItem($event)"
+      (selectItem)="selectedItem($event, input)"
     />
 
     <!-- <input id="typeahead-focus" type="text" class="search-bar" [(ngModel)]="model" [ngbTypeahead]="search" #instance="ngbTypeahead"

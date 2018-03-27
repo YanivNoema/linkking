@@ -3,12 +3,14 @@
     Explore more from the best
 </div><!--target="_blank"-->
 <div class="sidebar-container" *ngFor="let item of items | async; let i = index">
-    <a [href]="item.link" >
-        <div class="side-bar-item">
-            {{item.titleLink}}
-        </div>
-        <div class="sidebar-item-image">
-            <img class="side-bar-image" [src]="item.image"> 
-        </div>
-    </a>
+    <div *ngIf="helperService.isthisItemNotEqualThisPage(item.titleLink)">
+        <a [href]="item.link" >
+            <div class="side-bar-item">
+                {{item.titleLink}}
+            </div>
+            <div class="sidebar-item-image">
+                <img class="side-bar-image" [src]="item.image"> 
+            </div>
+        </a>
+    </div>
 </div>

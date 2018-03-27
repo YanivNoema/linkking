@@ -1,0 +1,14 @@
+
+<div class="side-bar-title">
+    Explore more from the best
+</div><!--target="_blank"-->
+<div class="home-container" *ngFor="let item of items | async; let i = index">
+    <a [href]="item.link" >
+        <div class="home-item">
+            {{item.titleLink}}
+        </div>
+        <div class="home-item-image">
+            <img class="home-image" [src]="item.image"> 
+        </div>
+    </a>
+</div>

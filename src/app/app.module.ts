@@ -22,6 +22,8 @@ import { WebBrowsersComponent } from './pages/web-brwosers.component';
 import { ChickenMarinadeRecipesComponent } from './pages/chicken-marinade-recipes.component';
 import { CheesecakeRecipesComponent } from './pages/cheesecake-recipes.component';
 
+/*directives */
+// import { ReadMoreDirective } from 'ngx-read-more';
 
 import { TransferHttpCacheModule } from '@nguniversal/common';
 import { AngularFireModule } from 'angularfire2';
@@ -74,7 +76,7 @@ import { NgbdTypeaheadBasic } from './autocomplete/typeahead-basic';
     NgbModule.forRoot(),
     HttpClientModule,
     RouterModule.forRoot([
-      { path: '', component: TextEditorsComponent, pathMatch: 'full'},
+      { path: '', component: HomeComponent, pathMatch: 'full'},
       { path: 'the-best-text-editors', component: TextEditorsComponent },
       { path: 'the-best-national-parks-in-america', component: NationalParksComponent },
       { path: 'the-best-ice-cream-cake-recipes', component: IceCreamCakeRecipesComponent },

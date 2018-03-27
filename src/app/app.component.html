@@ -1,33 +1,34 @@
-
 <div class="nav-position">
     <nav></nav>
 </div>
 <div class="empty-divider"></div>
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-3" style="margin: 0; padding: 0;">
-            <div *ngIf="this.managerService.showMenu" class="left-side-bar-menu shadow">
-                <app-social-sidebar></app-social-sidebar>
+    <div class="col-12" style="margin: 0; padding: 0;">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 not-display-on-max-481px" style="margin: 0; padding: 0;">
+                <div *ngIf="this.managerService.showMenu" class="left-side-bar-menu shadow">
+                    <app-social-sidebar></app-social-sidebar>
+                </div>
             </div>
-        </div>
-        <div class="col-6 col-margin">
-            <!-- <div class="row"> -->
+            <div class="col-sm-12 col-lg-6 col-md-6" style="margin-top: 2em;">
+                <!-- <div class="row"> -->
                 <!--div class="col-1">
                     < <div class="col-divider col-margin"></div>
                 </div-->
                 <!-- <div class="col-10"> -->
-                    <router-outlet></router-outlet>
+                <router-outlet></router-outlet>
                 <!-- </div> -->
                 <!-- <div class="col-1"> -->
                 <!-- </div> -->
-            <!-- </div> -->
-            <!-- <app-home></app-home> -->
-            <!-- <panel></panel> -->
-        </div>
-        <!-- <div class="col-divider col-margin"></div> -->
-        <div class="col-1 col-margin">
-            <div class="sidebar-wrapper scroll scroll4 shadow">
-                <side-bar></side-bar>
+                <!-- </div> -->
+                <!-- <app-home></app-home> -->
+                <!-- <panel></panel> -->
+            </div>
+            <!-- <div class="col-divider col-margin"></div> -->
+            <div *ngIf="showMenu" class="col-lg-3 col-md-3 not-display-on-max-481px">
+                <div class="sidebar-wrapper scroll scroll4" style="margin-top: 2em;">
+                    <side-bar></side-bar>
+                </div>
             </div>
         </div>
     </div>

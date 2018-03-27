@@ -57,13 +57,14 @@ export class NgbdTypeaheadBasic {
       .merge(this.click$.filter(() => !this.instance.isPopupOpen()))
       .map(term => (term === '' ? this.searchItem : this.searchItem.filter(v => v.toLowerCase().indexOf(term.toLowerCase()) > -1)).slice(0, 10))
 
-  selectedItem(item) {
-    // this.clickedItem=item.item;
-    // this.router.navigateByUrl(`/${item.item}`);
-    console.log(item);
+  selectedItem($event, input) {
+    $event.preventDefault();
+    input.value = '';
+    this.router.navigateByUrl(this.helperService.getKebabCaseFromTitle($event.item));
   }
 
   initItems(items) {
-    this.searchItem = items.map(item => this.helperService.getTitleFromKebabCase(item.titleLink));
+     const retItems = items.map(item => this.helperService.getTitleFromKebabCase(item.titleLink));
+     this.searchItem = retItems.filter(title => this.helperService.isthisItemNotEqualThisPage(title));
   }
 }

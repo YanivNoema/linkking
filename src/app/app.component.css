@@ -8,9 +8,10 @@
 .sidebar-wrapper {
     position: fixed;
     padding: .5em;
-    max-height: 80vh;
+    max-height: 88vh;
     overflow: scroll;
-    background: #eee;
+    background: #fafafa;
     overflow-x: hidden;
     text-align: center;
+    border: 1px solid #eee;
 }

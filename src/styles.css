@@ -188,22 +188,33 @@ a:active {
     overflow: auto;
     float: left;
     margin: 0 10px;
-  }
+}
 
 .scroll4::-webkit-scrollbar {
-    width: 10px;
-  }
+    width: 8px;
+}
    
-  .scroll4::-webkit-scrollbar-thumb {
-    background: #666;
+.scroll4::-webkit-scrollbar-thumb {
+    background: #CFD8DC;
     border-radius: 20px;
-  }
+}
   
-  .scroll4::-webkit-scrollbar-track {
-    background: #ddd;
-    border-radius: 20px;
-  }
+.scroll4::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 0px;
+}
 
-  .shadow {
+/*done scrollbar*/
+
+.shadow {
     box-shadow: 0px 0px 10px #B0BEC5;
-  }
+}
+
+/*start devices css*/
+
+@media (max-width: 481px)  { /* smartphones, iPhone, portrait 480x320 phones */ 
+    .not-display-on-max-481px {
+        display: none;
+    }
+
+}

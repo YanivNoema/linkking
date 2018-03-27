@@ -20,60 +20,18 @@
 }
 
 .menu {
-	position: relative;
-	display:  inline-block;
-    margin-right: 25px;
-    margin-top: 5px;
-}
-.menu span {
-	margin: 0 auto;
-	position: relative;
-	top: 12px;
-}
-.menu span:before, .menu span:after {
-	position: absolute;
-	content: '';
-}
-.menu span, .menu span:before, .menu span:after {
-	width: 30px;
-	height: 5px;
-	background-color: #B0BEC5;
-	display: block;
-}
-.menu span:before {
-	margin-top: -8px;
-}
-.menu span:after {
-	margin-top: 8px;
+    position: relative;
+    display: inline-block;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
+    width: 20px;
+    height: 20px;
+    margin: 0px 10px 0px 15px;
+    position: relative;
+    top: 17%;
 }
 
-.example7 span {
-	-webkit-transition-duration: 0s; transition-duration: 0s;
-	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
-}
-.example7:hover span {
-	background-color: rgba(0,0,0,0.0);
-	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
-}
-.example7 span:before {
-	-webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
-	-webkit-transition-duration: 0.2s; transition-duration: 0.2s;
-	-webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s;
-	-webkit-transform-origin: 0% 100%; transform-origin: 0% 100%;
-}
-.example7:hover span:before {
-	margin-top: 0;
-	-webkit-transform: rotate(22.5deg) skewX(22.5deg); transform: rotate(22.5deg) skewX(22.5deg);
-	-webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
-}
-.example7 span:after {
-	-webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
-	-webkit-transition-duration: 0.2s; transition-duration: 0.2s;
-	-webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s;
-	-webkit-transform-origin: 0% 0%; transform-origin: 0% 0%;
-}
-.example7:hover span:after {
-	margin-top: 0;
-	-webkit-transform: rotate(-22.5deg) skewX(-22.5deg); transform: rotate(-22.5deg) skewX(-22.5deg);
-	-webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
+.menu:hover {
+	cursor: pointer;
+	opacity: .8;
 }

@@ -2,9 +2,11 @@
     The Best {{itemNameTitle}}
 </div>
 
+
+
 <div *ngFor="let item of items | async | reverse">
     <div class="item-box" style="position: relative;">
-        <div class="item-box-sidebar">
+        <div class="item-box-sidebar not-display-on-max-481px">
             <div class="arrow-box arrow-up linking-btn" [ngClass]="{'disabled': checkMaxVotes()}">
                 <img class="arrow" [ngClass]="{'img-disabled': checkMaxVotes()}" (click)="voteUp(item)" src="/assets/icons/up-arrow.png"
                     width="40">
@@ -34,7 +36,14 @@
         </div>
         <div class="item-box-main">
             <div class="row">
-                <div class="item-box-text col-6">
+                    <div class="item-box-img-mobile col-sm-12">
+                            <div class="item-image-wrapper-mobile">
+                                <a target="_blank" [href]=item.link>
+                                    <img class="item-image-mobile" [src]="item.image" (error)="updateUrl($event, item)"/>
+                                </a>
+                            </div>
+                        </div>
+                <div class="item-box-text col-lg-6 col-md-6 col-sm-12">
                     <div class="item-title">{{ item.title }}</div>
                     <div class="width-seprator"></div>
                     <div class="item-description-source">Description source:
@@ -49,7 +58,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="item-box-img col-6">
+                <div class="not-display-on-max-481px item-box-img col-6">
                     <div class="item-image-wrapper">
                         <a target="_blank" [href]=item.link>
                             <img class="item-image" [src]="item.image" (error)="updateUrl($event, item)"/>
