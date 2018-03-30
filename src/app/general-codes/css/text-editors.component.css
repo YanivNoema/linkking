@@ -20,7 +20,6 @@
 .item-box-sidebar {
     background-color: #FAFAFA;
     width: 15%;
-    height: 250px;
     margin: 0 .5em;
 }
 
@@ -125,7 +124,6 @@
 }
 
 .item-link-box {
-    margin: 0 .3em;
 }
 
 .item-link {
@@ -188,7 +186,7 @@
 
 .item-image-wrapper-mobile {
     height: 200px;
-    width: 300px;
+    width: 250px;
 }
 /*btn*/
   @-webkit-keyframes focusFade {
@@ -372,8 +370,8 @@
 }
 
 .action-tool-bar {
-    display: flex;
-    margin: .8em .5em;
+    display: inline-flex;
+    margin: .8em .1em;
     align-items: center;
 }
 

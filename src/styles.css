@@ -220,6 +220,10 @@ a:active {
     .flex-dir {
         flex-direction: column;
     }
+    /* .action-tool-bar { */
+        /* display: block !important; */
+    /* } */
+    
 }
 
 @media (min-width: 1025px) { /* big landscape tablets, laptops, and desktops */ 

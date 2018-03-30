@@ -1,9 +1,6 @@
 <div class="item-main-title">
     The Best {{itemNameTitle}}
 </div>
-
-
-
 <div *ngFor="let item of items | async | reverse">
     <div class="item-box container-fluid flex-dir" style="position: relative;">
         <div class="item-box-sidebar not-display-on-max-481px">
@@ -71,7 +68,7 @@
                 </div>
             </div>
         </div>
-        <div class="item-box-sidebar-mobile not-display-on-min-1025px">
+        <div class="item-box-sidebar-mobile not-display-on-min-1025px" style="width: 100%;"> 
             <div class="arrow-box-mobile arrow-up linking-btn col-3" [ngClass]="{'disabled': checkMaxVotes()}">
                 <img class="arrow" [ngClass]="{'img-disabled': checkMaxVotes()}" (click)="voteUp(item)" src="/assets/icons/up-arrow.png"
                     width="40">

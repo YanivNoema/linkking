@@ -30,7 +30,7 @@ svg {
 }
 
 .social-icon {
-    padding: .4em .4em 0 .4em;
+    padding: 5px 5px 0 5px;
     display: inline-block;
     text-align: center;
     transition: fill ease .3s;
