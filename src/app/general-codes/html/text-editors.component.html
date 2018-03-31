@@ -3,7 +3,7 @@
 </div>
 <div *ngFor="let item of items | async | reverse">
     <div class="item-box container-fluid flex-dir" style="position: relative;">
-        <div class="item-box-sidebar not-display-on-max-481px">
+        <div class="small-hover-shadow item-box-sidebar not-display-on-max-481px">
             <div class="arrow-box arrow-up linking-btn" [ngClass]="{'disabled': checkMaxVotes()}">
                 <img class="arrow" [ngClass]="{'img-disabled': checkMaxVotes()}" (click)="voteUp(item)" src="/assets/icons/up-arrow.png"
                     width="40">
@@ -33,7 +33,7 @@
                 </div>
             </div>
         </div>
-        <div class="item-box-main">
+        <div class="item-box-main small-hover-shadow">
             <div class="col-12">
                 <div class="row">
                     <div class="item-box-img-mobile col-sm-12 not-display-on-min-1025px">
@@ -54,7 +54,7 @@
                         <div class="action-tool-bar">
                             <app-social-bar [img]='item.img' [link]='item.link'></app-social-bar>
                             <div class="item-link-box">
-                                <a [href]=item.link target="_blank" class="a-button">Watch link</a>
+                                <a [href]=item.link target="_blank" class="a-button">Visit Link</a>
                             </div>
                         </div>
                     </div>

@@ -5,17 +5,16 @@ import { AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firesto
 export class FireBaseService {
 
     constructor(private db: AngularFirestore) {}
-
-    addItem(newItem, documnetName) {
-        this.db.collection('/' + documnetName).doc(newItem.title).set({
-        title: newItem.title,
+    addItem(newItem, collectionName) {
+        this.db.collection(collectionName).doc(newItem.linkTitle).set({
+        title: newItem.linkTitle,
         totalPoints: 0,
-        description: newItem.description,
-        link: newItem.link,
-        source: newItem.source,
-        email: newItem.email,
+        description: newItem.linkDescription,
+        link: newItem.linkUrl,
+        source: newItem.linkSource,
+        // email: newItem.email,
         editorsUpload: false,
-        image: newItem.image
+        image: newItem.linkImage
       });
   }
 }

@@ -10,8 +10,8 @@
     padding: .5em;
     max-height: 88vh;
     overflow: scroll;
-    background: #fafafa;
+    /* background: #fafafa; */
     overflow-x: hidden;
     text-align: center;
-    border: 1px solid #eee;
+    border-left: 10px solid #96e2d8;
 }

@@ -40,7 +40,7 @@ a {
 }
 
 .sidebar-container:hover {
-    background-color: #F5F5F5;
+    /* background-color: #F5F5F5; */
     opacity: 1;
     cursor: pointer;
 }

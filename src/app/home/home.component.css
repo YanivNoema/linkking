@@ -1,11 +1,45 @@
+.side-bar-title {
+    background-color: #01579b;
+    color: #fff;
+    padding: .5em;
+    font-size: 2em;
+    font-weight: 100;
+}
+
+.items-container {
+    align-items: normal;
+    display: flex;
+    vertical-align: middle;
+    justify-content: space-evenly;
+}
+
 .home-container {
+    width: 220px;
     display: inline-block;
     text-align: center;
+    background-color: #FAFAFA;
+    padding: .5em;
+    margin: .5em;
+    border: .02em solid #CFD8DC;
+    position: relative;
+    height: 250px;    
+}
+
+.home-item-title {
+    font-weight: 300;
+    font-size: 1.3em;
+    margin: .3em;
+    color: #607D8B;
 }
 
 .home-item-image {
-    width: 200px;
-    height: 200px;
+    width: 130px;
+    height: 130px;
+    margin: auto;
+    position: absolute;
+    bottom: .5em;
+    right: 0;
+    left: 0;
 }
 
 .home-image {

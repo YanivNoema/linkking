@@ -74,8 +74,9 @@ export class ContactUsComponent implements OnInit {
         <div>Email: <a href="mailto:${email}">${email}</a></div>
         <div>Date: ${date}</div>
       `;
-      formRequest = { name, email, date, html, linkTitle, linkImage, linkDescription, linkSource, linkUrl };
-      // this.useSubmit(formRequest).then(() =>{
+      formRequest = { name, email, date, html, linkTitle, linkImage, linkDescription, linkSource, linkUrl};
+        this.useSubmit(formRequest);
+      //   .then(() => {
       // }) ;
     } else if (this.formArray.type === 'suggest') {}
   }
@@ -95,6 +96,7 @@ export class ContactUsComponent implements OnInit {
   }
 
   useSubmit(formRequest) {
-    this.fireBaseService.addItem(formRequest, this.router.url );
+    const collectionName = this.router.url.charAt(0) === '/' ? this.router.url.substr(1) : this.router.url; // remove /
+    this.fireBaseService.addItem(formRequest, collectionName);
   }
 }
