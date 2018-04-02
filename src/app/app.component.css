@@ -15,3 +15,17 @@
     text-align: center;
     border-left: 10px solid #96e2d8;
 }
+
+.mobile-menu {
+    height: 110px;
+    background-color: red;
+    position: fixed;
+    width: 105vh;
+    z-index: 10;
+    display: flex;
+    bottom: 0;
+    left: -2px;
+    background-color: #fff;
+    width: 100%;
+    justify-content: space-between;
+}

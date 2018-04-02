@@ -5,6 +5,9 @@
 <div class="container-fluid">
     <div class="col-12" style="margin: 0; padding: 0;">
         <div class="row">
+            <div class="mobile-menu not-display-on-min-1025px shadow">
+                <app-social-sidebar></app-social-sidebar>
+            </div>
             <div class="col-lg-3 col-md-3 not-display-on-max-481px" style="margin: 0; padding: 0;">
                 <div *ngIf="this.managerService.showMenu" class="left-side-bar-menu">
                     <app-social-sidebar></app-social-sidebar>

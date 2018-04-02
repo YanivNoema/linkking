@@ -7,8 +7,8 @@ import { HelperService } from '../services/helper-service.component';
 
 @Component({
   selector: 'app-text-editors',
-  templateUrl: '../general-codes/html/text-editors.component.html',
-  styleUrls: ['../general-codes/css/text-editors.component.css']
+  templateUrl: '../general-codes/html/linkcomponent.html',
+  styleUrls: ['../general-codes/css/linkcomponent.css']
 })
 export class TextEditorsComponent {
   newText: string;
@@ -54,6 +54,6 @@ export class TextEditorsComponent {
 
   updateUrl(e, item) {
     item.image =
-    'https://beebom-redkapmedia.netdna-ssl.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg';
+    '/assets/404-image.png';
   }
 }

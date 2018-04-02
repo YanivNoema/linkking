@@ -7,8 +7,8 @@ import { HelperService } from '../services/helper-service.component';
 
 @Component({
   selector: 'app-cheesecake-recipes',
-  templateUrl: '../general-codes/html/text-editors.component.html',
-  styleUrls: ['../general-codes/css/text-editors.component.css']
+  templateUrl: '../general-codes/html/linkcomponent.html',
+  styleUrls: ['../general-codes/css/linkcomponent.css']
 })
 export class CheesecakeRecipesComponent {
   newText: string;
