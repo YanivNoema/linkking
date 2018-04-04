@@ -24,7 +24,6 @@ import { CheesecakeRecipesComponent } from './pages/cheesecake-recipes.component
 
 /*directives */
 // import { ReadMoreDirective } from 'ngx-read-more';
-
 import { TransferHttpCacheModule } from '@nguniversal/common';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';

@@ -219,13 +219,32 @@ a:active {
 
 /*start devices css*/
 
-@media (max-width: 481px)  { /* smartphones, iPhone, portrait 480x320 phones */ 
+@media (max-width: 1020px)  { /* smartphones, iPhone, portrait 480x320 phones */ 
     .not-display-on-max-481px {
-        display: none;
+        display: none !important;
     }
 
     .flex-dir {
         flex-direction: column;
+    }
+
+    .home-container {
+        width: 100% !important;
+        max-width: 400px !important;
+    }
+    
+    .modal-content textarea, input {
+        width: 100% !important;
+        max-width: 400px !important;
+        font-size: 1.8em;
+    }
+
+    .logo-wrapper {
+        padding-left: 8px !important;
+    }
+    
+    .contact-headline {
+        font-size: 1.8em !important;
     }
     /* .action-tool-bar { */
         /* display: block !important; */
