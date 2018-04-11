@@ -13,14 +13,17 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { NavComponent } from './nav/nav.component';
 import { SoicalSidebarComponent } from './social-sidebar/social-sidebar.component';
 import { ContactUsComponent } from './contact/contact-us.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 /*pages*/
 import { TextEditorsComponent } from './pages/text-editors.component';
 import { NationalParksComponent } from './pages/national-parks.component';
 import { IceCreamCakeRecipesComponent } from './pages/ice-cream-cake-recipes.component.';
 import { WebBrowsersComponent } from './pages/web-brwosers.component';
+import { BananBreadComponent } from './pages/banana-bread.component';
 import { ChickenMarinadeRecipesComponent } from './pages/chicken-marinade-recipes.component';
 import { CheesecakeRecipesComponent } from './pages/cheesecake-recipes.component';
+import { HomemadePizzaComponent } from './pages/homemade-pizza.component';
 
 /*directives */
 // import { ReadMoreDirective } from 'ngx-read-more';
@@ -49,6 +52,7 @@ import { NgbdTypeaheadBasic } from './autocomplete/typeahead-basic';
 @NgModule({
   declarations: [
     AppComponent,
+    NotFoundComponent,
     HomeComponent,
     SidebarComponent,
     TextEditorsComponent,
@@ -61,7 +65,9 @@ import { NgbdTypeaheadBasic } from './autocomplete/typeahead-basic';
     ContactUsComponent,
     WebBrowsersComponent,
     ChickenMarinadeRecipesComponent,
-    CheesecakeRecipesComponent
+    CheesecakeRecipesComponent,
+    BananBreadComponent,
+    HomemadePizzaComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
@@ -76,12 +82,15 @@ import { NgbdTypeaheadBasic } from './autocomplete/typeahead-basic';
     HttpClientModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full'},
+      { path: 'the-best-homemade-pizza-recipe', component: HomemadePizzaComponent },
       { path: 'the-best-text-editors', component: TextEditorsComponent },
       { path: 'the-best-national-parks-in-america', component: NationalParksComponent },
       { path: 'the-best-ice-cream-cake-recipes', component: IceCreamCakeRecipesComponent },
       { path: 'the-best-web-browsers', component: WebBrowsersComponent },
       { path: 'the-best-chicken-marinade-recipes', component: ChickenMarinadeRecipesComponent },
       { path: 'the-best-cheesecake-recipes', component: CheesecakeRecipesComponent },
+      { path: 'the-best-banana-bread-recipes', component: BananBreadComponent },
+      { path: '**',  component: NotFoundComponent },
     ]),
     ],
     providers: [
